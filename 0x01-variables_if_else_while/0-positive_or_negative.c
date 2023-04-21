@@ -4,6 +4,7 @@
 
 /**
  *  Main - Entry point
+ *
  *  If, else code in order to print whether the number
  *  stored in the variable n is positive or negative
  *  Return: Always 0 (Success)
@@ -20,6 +21,6 @@ int main(void)
 	else if (n < 0)
 	printf("%d is negative\n", n);
 	else
-	printf("%d zero\n", n);
+	printf("%d is zero\n", n);
 	return (0);
 }
