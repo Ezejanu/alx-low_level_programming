@@ -24,5 +24,6 @@ int main(void)
 		else if (LD > 0 < 6)
 	{
 			printf("LD of %d is %d and is less than 6 and not 0\n" LD, n);
+	}
 	return (0);
 }
