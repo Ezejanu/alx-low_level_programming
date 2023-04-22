@@ -11,20 +11,20 @@
 int main(void)
 
 {
-	int n; int LD; 
+	int n; int ld; 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-		if (LD == 0)
+		if (ld == 0)
 	{
-		printf("LD of %d is %d and is 0\n", n, LD);
+		printf("ld of %d is %d and is 0\n", n, ld);
 	}
-		else if (LD > 5)
+		else if (ld > 5)
 	{	
-			printf("LD of %d is %d and is greater than 5\n", n, LD);
+			printf("ld of %d is %d and is greater than 5\n", n, ld);
 	}
-		else if (LD < 6)
+		else if (ld < 6)
 	{
-			printf("LD of %d is %d and is less than 6 and not 0\n", n, LD);
+			printf("ld of %d is %d and is less than 6 and not 0\n", n, ld);
 	}
 	return (0);
 }
