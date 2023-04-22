@@ -17,15 +17,12 @@ int main(void)
 	putchar(alphabet);
 }
 {
-	if alphabet = 'z'
+	if (alphabet = 'z)'
 
 		alphabet = 'A'
 			for (; alphabet <= 'Z'; alphabet++)
 
 			putchar(alphabet);
-			{
-				break;
-			}
 }
 	putchar('\n');
 	return (0);
