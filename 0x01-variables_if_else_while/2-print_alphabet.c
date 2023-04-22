@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <ctype.h>
+/**
+ * main - Entry
+ *
+ * Description: This is a program that prints the alphabet in lowercase
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int alphabet;
+
+	for (alphabet = '[a..z]'; alphabet++)
+{
+	alphabet = tolower(alphabet);
+	putchar(alphabet);
+}
+	putchar("\n");
+	return (0);
+}
