@@ -9,11 +9,12 @@
  * Return: Always 0 (success)  
  */
 int main(void)
+
 {
-	int n; int LD; 
+	int n; int lastd; 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (LD == 0)
+		if (LD == 0)
 	{
 		printf("LD of %d is %d and is 0\n", n, LD);
 	}
@@ -21,7 +22,7 @@ int main(void)
 	{	
 			printf("LD of %d is %d and is greater than 5\n", n, LD);
 	}
-		else if (0 < LD < 6)
+		else if (LD < 6)
 	{
 			printf("LD of %d is %d and is less than 6 and not 0\n", n, LD);
 	}
