@@ -11,11 +11,11 @@ int main(void)
 {
 	int alphabet;
 
-	for (alphabet = '[a..z]'; alphabet++)
+	for (alphabet = a; alphabet <= z; alphabet++)
 {
 	alphabet = tolower(alphabet);
 	putchar(alphabet);
 }
-	putchar("\n");
+	putchar("*\n");
 	return (0);
 }
