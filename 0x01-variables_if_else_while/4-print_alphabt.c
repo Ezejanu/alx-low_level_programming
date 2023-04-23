@@ -10,14 +10,16 @@
 
 int main(void)
 {
+{
 	int chr;
 
 	for (chr = 'a'; chr <= 'd'; chr++)
 	for (chr = 'f'; chr < 'q'; chr++)
-	for (chr > 'q'; chr <= 'z'; chr++)
+	for (chr => 'r'; chr <= 'z'; chr++)
 	putchar(chr);
 }
 {
 	putchar('\n');
 		return (0);
+}
 }
