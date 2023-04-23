@@ -12,9 +12,10 @@ int main(void)
 {
 	int chr;
 
-	for (chr = 'a'; chr <= 'd'; chr = 'f'; chr < 'q'; chr > 'q';
-			chr <= 'z'; chr++)
-		putchar(chr);
+	for (chr = 'a'; chr <= 'd'; chr++)
+	for (chr = 'f'; chr < 'q'; chr++)
+	for (chr > 'q'; chr <= 'z'; chr++)
+	putchar(chr);
 }
 {
 	putchar('\n');
