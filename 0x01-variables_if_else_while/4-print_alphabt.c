@@ -13,9 +13,10 @@ int main(void)
 	int chr;
 
 	for (chr = 'a'; chr <= 'z'; chr++)
-		if (chr == 'e') 
+		if (chr == 'e')
+			continue;
 		if (chr == 'q')
-	continue;
+			continue;
 	putchar(chr);
 	putchar('\n');
 		return (0);
