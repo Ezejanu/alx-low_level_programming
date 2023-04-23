@@ -13,8 +13,9 @@ int main(void)
 	int chr;
 
 	for (chr = 'a'; chr <= 'z'; chr++)
-		if (chr == 'e'; chr == 'q')
-		continue;
+		if (chr == 'e') 
+		if (chr == 'q')
+	continue;
 	putchar(chr);
 }
 {
