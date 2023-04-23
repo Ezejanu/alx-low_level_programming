@@ -15,6 +15,7 @@ int main(void)
 	for (chr = 'a'; chr <= 'z'; chr++)
 	if (chr != 'e' && chr != 'q')
 	putchar(chr);
-}
+
 	putchar('\n');
 		return (0);
+}
