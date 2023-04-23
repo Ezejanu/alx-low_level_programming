@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
  * main - Entry
  *
@@ -7,6 +8,7 @@
  * Return: Always 0 (Success)
  */
 
+typedef int make_iso_compilers_happy;
 int main(void)
 {
 	int ch;
