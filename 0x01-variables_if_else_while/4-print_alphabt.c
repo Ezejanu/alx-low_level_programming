@@ -8,13 +8,15 @@
  * Return 0 Always: (Success)
  */
 
-void main(void)
+int main(void)
 {
 	int chr;
 
 	for (chr = 'a'; chr <= 'd'; chr = 'f'; chr < 'q'; chr > 'q';
 			chr <= 'z'; chr++)
 		putchar(chr);
-		putchar('\n');
+}
+{
+	putchar('\n');
 		return (0);
 }
