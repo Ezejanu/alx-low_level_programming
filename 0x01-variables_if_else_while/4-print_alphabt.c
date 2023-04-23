@@ -17,8 +17,6 @@ int main(void)
 		if (chr == 'q')
 	continue;
 	putchar(chr);
-}
-{
 	putchar('\n');
 		return (0);
 }
