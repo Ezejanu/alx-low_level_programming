@@ -12,7 +12,6 @@ int main(void)
 	for (dig = '0'; dig <= '9'; dig++)
 	putchar (dig);
 
-	putchar ('\n')
+	putchar ('\n');
 
-	return (0);
-}
+	return (0); }
