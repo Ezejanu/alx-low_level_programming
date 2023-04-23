@@ -15,7 +15,7 @@ int main(void)
 
 	for (chr = 'a'; chr <= 'd'; chr++)
 	for (chr = 'f'; chr < 'q'; chr++)
-	for (chr => 'r'; chr <= 'z'; chr++)
+	for (chr = 'r'; chr <= 'z'; chr++)
 	putchar(chr);
 }
 {
