@@ -1,14 +1,16 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-/*
- *  Main - Entry point
+#include <stdio.h>
+#include <ctype.h>
+/**
+ * main - Entry
  *
- *  Description: 'If, else code in order to print whether the number
- *  stored in the variable n is positive or negative'
- *  Return: Always 0 (Success)
+ * Description: This is a program that prints
+ *
+ * whether the number stored in the variable n is positive or negative
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int n;
