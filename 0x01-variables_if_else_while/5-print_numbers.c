@@ -1,10 +1,14 @@
 #include <stdio.h>
-
-/*
- * This is a program that prints all single digit numbers of base 10
- * starting from 0, followed by a new line
- * Return: 0 Always (Success)
+#include <ctype.h>
+/**
+ * main - Entry
+ *
+ * Description: This is a program that prints
+ *
+ * possible different combinations of two digits
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int dig;
