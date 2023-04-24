@@ -15,7 +15,7 @@ int main(void)
 	int b;
 
 	for (a = '0'; a <= '8'; a++)
-	for (b = 'a+1'; b <= '9'; b++)
+	for (b = 'a + 1'; b <= '9'; b++)
 
 		if (a != b)
 			putchar (a);
@@ -28,4 +28,4 @@ int main(void)
 
 		putchar ('\n');
 		return (0);
-
+}
