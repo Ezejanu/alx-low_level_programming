@@ -13,16 +13,12 @@ int main(void)
 	int no;
 	int ch;
 
-	{
-
 		for (ch = 'a'; ch <= 'f'; ch++)
 		putchar (ch);
-	}
-		for (no = '1'; no <= '9'; no++)
-	{
+
+		for (no = '0'; no <= '9'; no++)
 		putchar (no);
 
 		putchar ('\n');
-	}		
 		return (0);
 }
