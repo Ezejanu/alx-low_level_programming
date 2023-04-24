@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <ctype.h>
-
 /**
- * main - This is a program that prints the alphabet in lowercase (omitting q and e),
- * followed by a new line
- * Return 0 Always: (Success)
+ * main - Entry
+ *
+ * Description: This is a program that prints
+ *
+ * lowercase alphabets omitting e and q
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -12,8 +14,10 @@ int main(void)
 	int chr;
 
 	for (chr = 'a'; chr <= 'z'; chr++)
+	{
 	if (chr != 'e' && chr != 'q')
 	putchar(chr);
+	}
 
 	putchar('\n');
 		return (0);
