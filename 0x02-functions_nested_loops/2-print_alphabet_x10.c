@@ -10,7 +10,7 @@
 void print_alphabet_x10(void)
 {
 	char alph;
-	int no = 9;
+	char no = 9;
 
 	while (no <= 9)
 	{
@@ -19,6 +19,6 @@ void print_alphabet_x10(void)
 		_putchar(alph);
 		}
 		_putchar('\n');
-		no++;
 	}
+		no++;
 }
