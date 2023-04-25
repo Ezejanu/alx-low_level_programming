@@ -9,8 +9,8 @@
  */
 void print_alphabet_x10(void)
 {
-	char alph;
-	char no = 9;
+	int alph;
+	int no = 9;
 
 	while (no <= 9)
 	{
