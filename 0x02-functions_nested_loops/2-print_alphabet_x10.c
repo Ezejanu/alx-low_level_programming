@@ -10,9 +10,9 @@
 void print_alphabet_x10(void)
 {
 	char alph;
-	int no = 10;
+	int no = 9;
 
-	while (no < 10)
+	while (no <= 9)
 	{
 		for (alph = 'a'; alph <= 'z'; alph++)
 		{
