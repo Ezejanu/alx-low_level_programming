@@ -5,7 +5,7 @@
  *
  * followed by a new line.
  *
- * Return 0 always (success)
+ * Return: 0 always (success)
  */
 int main(void)
 {
