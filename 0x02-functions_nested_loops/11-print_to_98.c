@@ -11,9 +11,9 @@ void print_to_98(int n)
 
 	if (n < 98)
 	for (goal = n; goal < 98; goal++)
-		printf("%d", goal);
+		printf("%d, ", goal);
 	else
 		for (goal = n; goal > 98; goal--)
-			printf("%d", goal);
+			printf("%d, ", goal);
 	printf("98\n");
 }
