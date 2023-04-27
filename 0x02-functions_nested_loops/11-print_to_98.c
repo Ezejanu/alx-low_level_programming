@@ -10,10 +10,10 @@ void print_to_98(int n)
 	int goal;
 
 	if (n < 98)
-	for (n = goal; n < 98; n++)
-		printf("%d", n);
+	for (goal = n; goal < 98; goal++)
+		printf("%d", goal);
 	else
-		for (n = goal; n > 98; n--)
-			printf("%d, ", n);
+		for (goal = n; goal > 98; goal--)
+			printf("%d", goal);
 	printf("98\n");
 }
