@@ -17,8 +17,8 @@ while (i < 10)
       _putchar(c / 10 + '0');
       _putchar(c % 10 + '0');
   }
+  i++;
 _putchar('\n');
-i++;
 }
 }
 
