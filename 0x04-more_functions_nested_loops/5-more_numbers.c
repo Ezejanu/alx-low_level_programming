@@ -4,6 +4,7 @@
  * more_numbers - a function that prints 10 times the numbers, from 0 to 14
  * Return: 0 Always
  */
+
 void more_numbers(void)
 {
   int c;
@@ -17,6 +18,7 @@ while (i < 10)
       _putchar(c % 10 + '0');
   }
 _putchar('\n');
+i++;
 }
 }
 
