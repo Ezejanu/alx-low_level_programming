@@ -14,21 +14,24 @@ void print_triangle(int size)
 	{
 		_putchar('\n');
 	}
-	for (rows = 0; rows <= size; rows++)
+	else
 	{
-		for  (columns = 0; columns <= size; columns++)
+		for (rows = 1; rows <= size; rows++)
 		{
-			int sum = (rows + columns);
-			
-			if (sum < size)
+			for  (columns = 1; columns <= size; columns++)
 			{
-				_putchar(' ');
+				int sum = (rows + columns);
+
+				if (sum <= size)
+				{
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar('#');
+				}
 			}
-			else
-			{
-				_putchar('#');
-			}
+		_putchar('\n');
 		}
-	_putchar('\n');
 	}
 }
