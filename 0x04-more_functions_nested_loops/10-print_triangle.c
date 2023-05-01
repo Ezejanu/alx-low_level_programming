@@ -19,7 +19,8 @@ void print_triangle(int size)
 		for  (columns = 0; columns <= size; columns++)
 		{
 			int sum = (rows + columns);
-			if (sum <= size)
+			
+			if (sum < size)
 			{
 				_putchar(' ');
 			}
