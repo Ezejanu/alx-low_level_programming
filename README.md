@@ -1,1 +1,2 @@
-This repository contains the solutions to my ALX 0x00.c - Hello, World tasks.
+Even more pointers - the projects on pointers continue, to help solidify previous learnings
+while introducing new concepts including pointers to pointers, multidimensional arrays, e.t.c
