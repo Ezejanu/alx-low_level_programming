@@ -11,9 +11,11 @@ char *_strchr(char *s, char c)
 	int a;
 
 	for (a = 0; s[a] >= '\0'; a++)
+		/* why '>=' instead of '!='? */
 	{
 		if (s[a] == c)
 			return (s + a);
+		/* why 's+a' instead of 's[a]'? */
 	}
 	return ('\0');
 }
