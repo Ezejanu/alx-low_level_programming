@@ -25,19 +25,8 @@ char *_strstr(char *haystack, char *needle)
 			}
 
 		}
-		if (needle[b] == '\0')
-				/**
-				 * (b + 1) is checking that the next value is
-				 * NULL, which means we've reached the end and
-				 * a match has been found.
-				 * Another way to write this would be to check
-				 * (needle[b] == '\0') but this would be outside
-				 * the 2nd 'for' loop. If we use (b == '\0') to
-				 * check inside the 'for' loop, it means we won't
-				 * actually ever check that we've reached the
-				 * end of needle because the NULL will always
-				 * be != to the next value in haystack.
-				 */
+			if (needle[b] == '\0')
+			/* end of needle has been reached and match found */
 			{
 				c = &haystack[a];
 				return (c);
