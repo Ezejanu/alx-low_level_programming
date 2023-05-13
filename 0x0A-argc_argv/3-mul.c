@@ -25,6 +25,6 @@ int main(int argc, char *argv[])
 		mul *= atoi(argv[a]);
 	}
 		printf("%d\n", mul);
+		return (0);
 	}
-	return (0);
 }
