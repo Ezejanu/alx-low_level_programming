@@ -9,7 +9,8 @@
 
 int main(int argc, char *argv[])
 {
-	int a, sum = 0;
+	int a;
+	unsigned int sum = 0;
 	char b[] = "Error";
 
 	if (argc <= 1)
@@ -25,6 +26,7 @@ int main(int argc, char *argv[])
 		printf("%s\n", b);
 		return (1);
 	}
+		if (atoi(argv[a]) > 0)
 		sum += atoi(argv[a]);
 	}
 		printf("%d\n", sum);
