@@ -13,23 +13,27 @@ int main(int argc, char *argv[])
 	unsigned int sum = 0;
 	char b[] = "Error";
 
-	if (argc <= 1)
-	{
-		printf("%d\n", 0);
-	}
+		if (argc <= 1)
+		{
+			printf("%d\n", 0);
+		}
 	else
-	{
+		{
 	for (a = 1; a < argc; a++)
-	{
-	if (atoi(argv[a]) == 0 && argv[a][0] != '0')
-	{
-		printf("%s\n", b);
-		return (1);
-	}
-		if (atoi(argv[a]) > 0)
-		sum += atoi(argv[a]);
-	}
-		printf("%d\n", sum);
-	}
-	return (0);
+		{
+	long int strtol(const char *str, char **endptr, int base);
+	char *endptr;
+	long c = strtol(argv[a], &endptr, 10);
+
+		if (*endptr != '\0')
+		{
+			printf("%s\n", b);
+			return (1);
+		}
+	if (atoi(argv[a]) > 0)
+	sum += c;
+		}
+			printf("%d\n", sum);
+		}
+		return (0);
 }
