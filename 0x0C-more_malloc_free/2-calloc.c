@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 
-
+/**
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int a;
@@ -12,7 +12,7 @@ char *_memset(char *s, char b, unsigned int n)
 	}
 	return (s);
 }
-
+*/
 
 /**
 * _calloc - function allocates memory for an array of nmemb elements
@@ -30,10 +30,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 	return (NULL);
 
-	ptr = malloc(nmemb * size);
+	ptr = calloc(nmemb * size);
 	if (ptr == NULL)
 	return (NULL);
 
-	_memset(ptr, 0, nmemb * size);
+/*	_memset(ptr, 0, nmemb * size); */
 	return (ptr);
 }
