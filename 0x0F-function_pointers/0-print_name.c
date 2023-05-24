@@ -10,7 +10,9 @@
 void print_name(char *name, void (*f)(char *))
 {
 	if (f && name)
-	/* i.e if (f != null and name != null,
-	meaning they are both valid inputs) */
+	/*
+	* i.e if (f != null and name != null,
+	* meaning they are both valid inputs)
+	*/
 	(*f)(name);
 }
