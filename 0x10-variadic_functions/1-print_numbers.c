@@ -18,11 +18,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	if (separator == NULL)
 		return;
 
-	if (n == 0)
-	{
-		va_end(sumargs);
-		putchar('\n');
-	}
 	for (i = 0; i < n; i++)
 	{
 		numbs = va_arg(sumargs, int);
