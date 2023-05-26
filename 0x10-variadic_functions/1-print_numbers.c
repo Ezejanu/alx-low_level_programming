@@ -21,7 +21,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		numbs = va_arg(sumargs, int);
 		printf("%d", numbs);
 		if (i < n - 1 && separator != NULL)
-			printf("%c", *separator);
+			printf("%c ", *separator);
 
 	}
 	va_end(sumargs);
