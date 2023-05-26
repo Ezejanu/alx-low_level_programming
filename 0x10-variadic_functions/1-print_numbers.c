@@ -18,12 +18,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	if (separator == NULL)
 		return;
 
-	/* va_start(sumargs, n); */
+	if (n == 0)
+	{
+		va_end(sumargs);
+		putchar('\n');
+	}
 	for (i = 0; i < n; i++)
 	{
 		numbs = va_arg(sumargs, int);
 		printf("%d", numbs);
-	/* va_list sumargs; */
 		if (i < n - 1 && separator != NULL)
 			printf("%c", *separator);
 
