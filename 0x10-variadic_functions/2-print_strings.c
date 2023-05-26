@@ -16,3 +16,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (separator == NULL)
 		return;
+	if (n == NULL)
+		printf("nil");

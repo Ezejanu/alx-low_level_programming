@@ -14,10 +14,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int numbs = 0;
 
-	if (separator == NULL)
+	va_start(sumargs, n);
+	if (separator == NULL || n == 0)
 		return;
 
-	va_start(sumargs, n);
+	/* va_start(sumargs, n); */
 	for (i = 0; i < n; i++)
 	{
 		numbs = va_arg(sumargs, int);
@@ -25,6 +26,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	/* va_list sumargs; */
 		if (i < n - 1 && separator != NULL)
 			printf("%c", *separator);
+
 	}
 	va_end(sumargs);
 	putchar('\n');
