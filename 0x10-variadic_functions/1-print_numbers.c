@@ -10,21 +10,22 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list sumargs;
+	va_list numbers;
 	unsigned int i;
-	int numbs = 0;
+	int numb = 0;
 
-	va_start(sumargs, n);
+	va_start(numbers, n);
 
 	for (i = 0; i < n; i++)
 	{
-		numbs = va_arg(sumargs, int);
-		printf("%d", numbs);
+		numb = va_arg(numbers, int);
+	/*	if (i < n - 1 && separator != NULL) */
+		printf("%d", numb);
 		if (i < n - 1 && separator != NULL)
-			printf("%c ", *separator);
+			printf("%s", separator);
 
 	}
-	va_end(sumargs);
+	va_end(numbers);
 	putchar('\n');
 
 }
