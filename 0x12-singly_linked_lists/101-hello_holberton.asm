@@ -1,21 +1,11 @@
-#include <stdio.h>
+	format db 'Hello, Holberton', 10, 0;
 
+	global main
+	extern printf
 
-/** printf1.c  print a long int, 64-bit, and an expression
-
-int main()
-{
-	char[] message
-	long int a=5;
-	printf("a=%ld, rax=%ld\n", a, a+2);
-	return (0);
-}
-*/
-
-int main()
-{
-	char msg[] = "Hello Holberton\n";
-	printf("%s\n",msg);
-	return 0;
-; }
-
+main:
+	push format; Push the address of the format string onto the stack
+	call printf; Call printf with the address of the format string as the argument
+	add esp, 4; Adjust the stack pointer to remove the pushed argument
+	xor eax, eax; Set eax to 0 to indicate successful execution
+	ret; Return control to the operating system
