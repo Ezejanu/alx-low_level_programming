@@ -5,7 +5,7 @@
 * before_main - a function that executes before the main function
 */
 
-void before_main(main)
+void before_main(void)
 {
 
 	printf("You're beat! and yet, you must allow,\n");
