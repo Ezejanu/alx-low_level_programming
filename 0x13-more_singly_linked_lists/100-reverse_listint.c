@@ -10,6 +10,7 @@
 listint_t *reverse_listint(listint_t **head)
 {
 
+/**
 	if (head == NULL)
 		return (NULL);
 	if (*head != NULL)
@@ -30,4 +31,19 @@ listint_t *reverse_listint(listint_t **head)
 	*head = prevNode;
 	}
 	return (*head);
+*/
+
+
+listint_t *prev = NULL, *curr = *head, *temp;
+while (curr != NULL)
+{
+	temp = curr->next;
+	curr->next = prev;
+	prev = curr;
+	curr = temp;
+}
+*head = prev;
+
+return (*head);
+
 }
