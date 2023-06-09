@@ -9,22 +9,25 @@
 
 void print_binary(unsigned long int n)
 {
-	int a = 0;
-	unsigned long int binary = 0;
+	int b, sigBits = 0;
 
 	if (n == 0)
-{
+	{
 		_putchar('0');
 		return;
-}
-	while (n)
-	{
-		a++;
-		binary = (binary << 1) | (n & 1);
-		n >>= 1;
 	}
-	while (a)
+
+	for (b = (sizeof(unsigned long int) * 8) - 1; b >= 0; b--)
 	{
-		_putchar((binary >> (--a)) & 1 ? '1' : '0');
+		unsigned long int mask = 1UL << b;
+
+		if (n & mask)
+		{
+			_putchar('1');
+			sigBits = 1;
+		}
+
+		else if (sigBits)
+			_putchar('0');
 	}
 }
