@@ -8,7 +8,7 @@
  * @key: a unique key (string) in the hash table
  * @value: the value corresponding to the key
  * Return: a pointer to the created node
- */
+ 
 
 hash_node_t *hash_node_create(char *key, char *value)
 {
@@ -25,6 +25,7 @@ hash_node_t *hash_node_create(char *key, char *value)
 
 	return (hash_node);
 }
+*/
 
 
 /**
