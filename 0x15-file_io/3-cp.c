@@ -7,19 +7,27 @@
 
 #define BUFFER_SIZE 1024
 
+/**
+ * main - Entry point for the program
+ * @argc: no of arguments passed to the program (including the name of the
+ * program)
+ * @argv: the commandline arguments
+ * Return: 0 for sucess, not 0 otherwise
+ */
+
 int main(int argc, char *argv[])
 {
 	ssize_t bytes_read, bytes_written;
 	char err_msg[100], *err_msg2, *buffer, *usage_msg;
 	const char *file_from = argv[1];
 	const char *file_to = argv[2];
-
 	int fd_from, fd_to;
-	
-	if (argc != 3) {
-        usage_msg = "Usage: cp file_from file_to\n";
-        write(STDERR_FILENO, usage_msg, strlen(usage_msg));
-        return 97;
+
+	if (argc != 3)
+	{
+		usage_msg = "Usage: cp file_from file_to\n";
+		write(STDERR_FILENO, usage_msg, strlen(usage_msg));
+		return (97);
     }
 
     /* Open source file for reading*/
@@ -27,7 +35,7 @@ int main(int argc, char *argv[])
     if (fd_from == -1) {
         strcat(err_msg, "\n");
         write(STDERR_FILENO, err_msg, strlen(err_msg));
-        return 98;
+        return (98);
     }
 
     /* Open destination file for writing or create it if it doesn't exist*/
@@ -38,7 +46,7 @@ int main(int argc, char *argv[])
         strcat(err_msg, "\n");
         write(STDERR_FILENO, err_msg, strlen(err_msg));
         close(fd_from);
-        return 99;
+        return (99);
     }
 
     buffer = malloc(BUFFER_SIZE);
@@ -53,7 +61,7 @@ int main(int argc, char *argv[])
             close(fd_from);
             close(fd_to);
             free(buffer);
-            return 99;
+            return (99);
         }
     }
 
@@ -65,17 +73,17 @@ int main(int argc, char *argv[])
         close(fd_from);
         close(fd_to);
         free(buffer);
-        return 98;
+        return (98);
     }
 
-	chmod(file_to, 0644);
+	chmod(file_to, 0664);
 
     /* Close file descriptors */
     if (close(fd_from) == -1 || close(fd_to) == -1) {
         err_msg2 = "Error: Can't close fd\n";
         write(STDERR_FILENO, err_msg2, strlen(err_msg2));
         free(buffer);
-        return 100;
+        return (100);
     }
 
     free(buffer);
