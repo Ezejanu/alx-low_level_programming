@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     /* Open destination file for writing or create it if it doesn't exist*/
     fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 664);
     if (fd_to == -1) {
-        strcpy(err_msg, "Error: Can't write to file ");
+        strcpy(err_msg, "Error: Can't write to ");
         strcat(err_msg, file_to);
         strcat(err_msg, "\n");
         write(STDERR_FILENO, err_msg, strlen(err_msg));
@@ -68,9 +68,11 @@ int main(int argc, char *argv[])
         return 98;
     }
 
+	chmod(file_to, 0644);
+
     /* Close file descriptors */
     if (close(fd_from) == -1 || close(fd_to) == -1) {
-        err_msg2 = "Error: Can't close file descriptors\n";
+        err_msg2 = "Error: Can't close fd\n";
         write(STDERR_FILENO, err_msg2, strlen(err_msg2));
         free(buffer);
         return 100;
