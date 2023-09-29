@@ -16,7 +16,9 @@ OBJ = $(SRC:.c =.o)
 #The program to delete files
 RM = rm - f
 
-all : $(NAME) $(NAME) : $(OBJ) $(CC) $(OBJ) - o $(NAME)
+all : $(NAME)
+$(NAME) : $(OBJ)
+	$(CC) $(OBJ) - o $(NAME)
 
 clean : $(RM) *~ .*sw? $(NAME)
 oclean : $(RM) $(OBJ)
