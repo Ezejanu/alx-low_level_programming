@@ -20,7 +20,9 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) - o $(NAME)
 
-clean : $(RM) *~ .*sw? $(NAME)
-oclean : $(RM) $(OBJ)
-fclean : clean oclean
+clean:
+	$(RM) *~ .*sw? $(NAME)
+oclean:
+	$(RM) $(OBJ)
+fclean: clean oclean
 re : fclean all
