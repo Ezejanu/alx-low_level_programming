@@ -18,7 +18,7 @@ RM = rm - f
 
 all : $(NAME)
 $(NAME) : $(OBJ)
-	$(CC) $(OBJ) - o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) - o $(NAME)
 
 clean : $(RM) *~ .*sw? $(NAME)
 oclean : $(RM) $(OBJ)
