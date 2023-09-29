@@ -13,14 +13,16 @@ SRC = main.c school.c
 #The object files(.o)
 OBJ = $(SRC:.c =.o)
 
-#The program to delete files
-RM = rm -f
+.PHONY:all clean oclean fclean re
 
 all : $(NAME)
-$(NAME) : $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+$(NAME) : m.h $(OBJ)
+	$(CC)  $(OBJ) -o $(NAME)
 
-clean : $(RM) *~ .*sw? $(NAME)
-oclean : $(RM) $(OBJ)
+clean :
+	$(RM) *~ .*sw? $(NAME)
+oclean :
+	$(RM) $(OBJ)
+
 fclean : clean oclean
 re : fclean all
