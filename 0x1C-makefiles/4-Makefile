@@ -11,7 +11,7 @@ NAME = school
 SRC = main.c school.c
 
 #The object files(.o)
-OBJ = $(SRC:.c =.o)
+OBJ = $(SRC:.c=.o)
 
 #The program to delete files
 RM = rm -f
@@ -19,10 +19,9 @@ RM = rm -f
 all : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-clean : $(RM) *~ .*sw? $(NAME)
-oclean : $(RM) $(OBJ)
+clean :
+	$(RM) *~ $(NAME)
+oclean :
+	$(RM) $(OBJ)
 fclean : clean oclean
 re : oclean all
