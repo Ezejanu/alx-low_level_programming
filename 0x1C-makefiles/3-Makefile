@@ -21,4 +21,4 @@ fclean: clean oclean
 %.o: %.c
 	$(CC) -c $< -o $@
 
-re: clean all
+re: fclean all
