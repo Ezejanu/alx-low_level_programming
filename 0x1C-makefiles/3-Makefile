@@ -1,0 +1,20 @@
+CC = gcc
+SRC = main.c school.c
+NAME = school
+OBJ = $(SRC:.c=.o)
+.PHONY: all clean oclean fclean
+
+all : $(NAME)
+$(NAME) : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+clean:
+	find -type f -name "*~" -exec rm -f {} +
+	find -type f -name ".*.sw?" -exec rm -f {} +
+	find -type f -executable -exec rm -f {} +
+	rm $(NAME)
+oclean:
+	rm $(OBJ)
+fclean: clean oclean
+
+re:
+	$(CC) $(SRC)
