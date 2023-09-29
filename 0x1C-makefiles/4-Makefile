@@ -26,4 +26,4 @@ $(NAME) : $(OBJ)
 clean : $(RM) *~ .*sw? $(NAME)
 oclean : $(RM) $(OBJ)
 fclean : clean oclean
-re : fclean all
+re : oclean all
