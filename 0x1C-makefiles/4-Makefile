@@ -2,7 +2,7 @@
 CC = gcc
 
 #The compiler flags
-CFLAGS = -Wall - Werror - Wextra - pedantic
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
 #The name of the executable
 NAME = school
@@ -14,15 +14,13 @@ SRC = main.c school.c
 OBJ = $(SRC:.c =.o)
 
 #The program to delete files
-RM = rm - f
+RM = rm -f
 
 all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) - o $(NAME)
 
-clean:
-	$(RM) *~ .*sw? $(NAME)
-oclean:
-	$(RM) $(OBJ)
-fclean: clean oclean
-re : oclean all
+clean : $(RM) *~ .*sw? $(NAME)
+oclean : $(RM) $(OBJ)
+fclean : clean oclean
+re : fclean all
