@@ -1,13 +1,12 @@
+# The compiler to be used
 CC = gcc
+
 SRC = main.c school.c
 NAME = school
 OBJ = $(SRC:.c=.o)
 RM = rm -f
 
-.PHONY: all clean oclean fclean
-
-all : $(NAME)
-$(NAME) : $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ .*sw? $(NAME)
